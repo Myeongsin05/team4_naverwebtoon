@@ -29,11 +29,36 @@ public class Work extends Author{
 			System.out.println("중에 입력하세요.");
 			System.out.println("웹툰 포맷 입력: ");
 			String format = sc.nextLine();
+			System.out.println("한줄 요약을 입력해주세요.");
+			this.summary = sc.nextLine();
+			if(title.isEmpty()||inputGenre.isEmpty()||format.isEmpty()||summary.isEmpty()) {
+				System.out.println("비어 있는 항목이 있습니다. 다시 입력해주세요.");
+			}else {
+				System.out.println(this.title+"작품 등록이 완료되었습니다!!");
+				break;
+			}
+			
 			
 			
 			
 			
 		}
 		
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 }
