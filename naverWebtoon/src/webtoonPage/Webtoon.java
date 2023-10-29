@@ -1,39 +1,19 @@
 package webtoonPage;
 
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
-
-public class Webtoon {
-	private String title; // 웹툰 제목
-	private String author; // 작가명
-	private double rating; // 평점
-	private String desciption; // 웹툰 소개글
-	public Webtoon() {
-		
-	}
-	public Webtoon(String title, String author, double rating) {
-		this.title = title;
-		this.author = author;
-		this.rating = rating;
-	}
-	public double getRating() {
-		return rating;
-	}
-	public void setRating(double rating) {
-		this.rating = rating;
-	}
-	public String getDesciption() {
-		return desciption;
-	}
-	public void setDesciption(String desciption) {
-		this.desciption = desciption;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public String getAuthor() {
-		return author;
-	}
+public interface Webtoon {
+	String getTitle();
+	String getAuthor();
+	double getRating();
+	void setDescription(String description);
+	String getDescription();
 	
+	void webtoonInfo(); // 웹툰 정보 출력
+	void readEpisode(Scanner scanner); // 원하는 화 선택
+	void readNextEp(); // 이전화
+	void readPrevEp(); // 다음화
+	void like(); // 좋아요 기능
+	void rate(int rating); // 별점 주기
+	void writeComment(String comment); // 댓글 기능
 }
