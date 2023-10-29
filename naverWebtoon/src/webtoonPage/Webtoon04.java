@@ -154,7 +154,7 @@ public class Webtoon04 implements Webtoon {	// 웹툰 인터페이스를 상속�
 	public void writeComment(String comment) {
 		comments.add(comment); 
 		String commentFilePath = BASE_PATH + "comments.txt";
-		try(FileWriter fw = new FileWriter(commentFilePath, false);  
+		try(FileWriter fw = new FileWriter(commentFilePath, true); // true = 새로운 내용을 파일에 추가  
 			BufferedWriter bw = new BufferedWriter(fw)){
 		   bw.write(comment);
 		   bw.newLine(); 

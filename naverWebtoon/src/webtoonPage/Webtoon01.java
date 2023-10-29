@@ -7,7 +7,7 @@ import java.util.*;
 public class Webtoon01 implements Webtoon {	// 웹툰 인터페이스를 상속받은 개별 웹툰
 	private String title="신의 탑"; // 웹툰 제목
 	private String author= "SIU"; // 작가명
-	private double rating=9.88; // 평점
+	private double rating =9.88; // 평점
 	private String desciption; // 웹툰 소개글
 	private static final String BASE_PATH = "C:\\Users\\okw93\\git\\team4_naverwebtoon\\naverWebtoon\\"
 			+ "src\\webtoonPage\\webtoon01\\";
@@ -161,7 +161,7 @@ public class Webtoon01 implements Webtoon {	// 웹툰 인터페이스를 상속�
 	public void writeComment(String comment) {
 		comments.add(comment); // 댓글을 리스트에 추가
 		String commentFilePath = BASE_PATH + "comments.txt";
-		try(FileWriter fw = new FileWriter(commentFilePath, false); // false = 새로운 내용을 파일에 추가 
+		try(FileWriter fw = new FileWriter(commentFilePath, true); // true = 새로운 내용을 파일에 추가 
 			BufferedWriter bw = new BufferedWriter(fw)){
 		   bw.write(comment);
 		   bw.newLine(); // 입력 후 라인 바꾸기.

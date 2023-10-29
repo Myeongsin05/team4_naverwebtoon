@@ -8,6 +8,10 @@ public class ReadPage {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Scanner epSc = new Scanner(System.in);
+		Webtoon wt01 = new Webtoon01();
+		Webtoon wt02 = new Webtoon02();
+		Webtoon wt03 = new Webtoon03();
+		Webtoon wt04 = new Webtoon04();
 
 		while(true) {
 			System.out.println("****************************************************************************************************");
@@ -19,7 +23,6 @@ public class ReadPage {
 			
 			switch(choice) {
 			case "1":
-				Webtoon wt01 = new Webtoon01();
 				wt01.webtoonInfo();
 				while (true) {
 					System.out.println("0. 회차 선택 | 1. 이전화 | 2. 다음화 | 3. 좋아요 | 4. 별점주기 | 5. 댓글 작성 | 6. 뒤로 가기");
@@ -60,7 +63,6 @@ public class ReadPage {
 				}
 				break;
 			case "2":
-				Webtoon wt02 = new Webtoon02();
 				wt02.webtoonInfo();
 				while (true) {
 					System.out.println("0. 회차 선택 | 1. 이전화 | 2. 다음화 | 3. 좋아요 | 4. 별점주기 | 5. 댓글 작성 | 6. 뒤로 가기");
@@ -101,7 +103,6 @@ public class ReadPage {
 				}
 				break;
 			case "3":
-				Webtoon wt03 = new Webtoon03();
 				wt03.webtoonInfo();
 				while (true) {
 					System.out.println("0. 회차 선택 | 1. 이전화 | 2. 다음화 | 3. 좋아요 | 4. 별점주기 | 5. 댓글 작성 | 6. 뒤로 가기");
@@ -142,7 +143,6 @@ public class ReadPage {
 				}
 				break;
 			case "4":
-				Webtoon wt04 = new Webtoon04();
 				wt04.webtoonInfo();
 				while (true) {
 					System.out.println("0. 회차 선택 | 1. 이전화 | 2. 다음화 | 3. 좋아요 | 4. 별점주기 | 5. 댓글 작성 | 6. 뒤로 가기");
